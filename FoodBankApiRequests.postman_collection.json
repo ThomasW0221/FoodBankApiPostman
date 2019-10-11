@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "ec709aa2-a632-4b37-b07b-0a88130d9a7e",
+		"name": "FoodBankApiRequests",
+		"description": "Run these when testing the backend\n\n<em>This will replace the records that we preload into the database so you will have to use these for testing</em>",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "InitialData",
+			"item": [
+				{
+					"name": "PostDonation1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"dateReceived\": \"2019-09-18\",\n\t\"donorName\": \"Tabatha and Van Doe\",\n\t\"donorAddress\": \"1 Fake St, Charlotte, NC, 12345\",\n\t\"donationWeight\": 31,\n\t\"itemsDonated\": [\n\t\t\t{\n\t\t\t\t\"name\": \"Alphabet Cookies\",\n\t\t\t\t\"description\": \"small bags\",\n\t\t\t\t\"itemCount\": 7\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Vanilla Jello Mixes\",\n\t\t\t\t\"description\": \"Jell O\",\n\t\t\t\t\"itemCount\": 2\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Fig Bars\",\n\t\t\t\t\"description\": \"fruit bars\",\n\t\t\t\t\"itemCount\": 3\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Crackers\",\n\t\t\t\t\"description\": \"boxes\",\n\t\t\t\t\"itemCount\": 3\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Oatmeal\",\n\t\t\t\t\"description\": \"Boxes/cylanders\",\n\t\t\t\t\"itemCount\": 11\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Cheerios\",\n\t\t\t\t\"description\": \"honeynut\",\n\t\t\t\t\"itemCount\": 4\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Instant Rice\",\n\t\t\t\t\"description\": \"bags\",\n\t\t\t\t\"itemCount\": 7\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Mango\",\n\t\t\t\t\"description\": \"bag of dried mango\",\n\t\t\t\t\"itemCount\": 1\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Apricott\",\n\t\t\t\t\"description\": \"bag of dried appricott\",\n\t\t\t\t\"itemCount\": 1\n\t\t\t}\n\t\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/donations",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"donations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostDonation2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"dateReceived\": \"2019-09-18\",\n\t\"donorName\": \"Cathy Rozzo\",\n\t\"donorAddress\": \"2 Fake St, Charlotte, NC, 12345\",\n\t\"donorEmail\": \"twinterf@uncc.edu\",\n\t\"donationWeight\": 62,\n\t\"itemsDonated\": [\n\t\t\t{\n\t\t\t\t\"name\": \"Beans\",\n\t\t\t\t\"description\": \"bag of great northern beans\",\n\t\t\t\t\"itemCount\": 2\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Peas\",\n\t\t\t\t\"description\": \"Bags of yellow split peas\",\n\t\t\t\t\"itemCount\": 2\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Rice\",\n\t\t\t\t\"description\": \"bags of rice\",\n\t\t\t\t\"itemCount\": 2\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Cranberries\",\n\t\t\t\t\"description\": \"bags of dried cranberries\",\n\t\t\t\t\"itemCount\": 2\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Peanut Butter\",\n\t\t\t\t\"description\": \"Jars of peanut butter\",\n\t\t\t\t\"itemCount\": 3\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Green Beans\",\n\t\t\t\t\"description\": \"Cans of green beans\",\n\t\t\t\t\"itemCount\": 6\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Chicken Noodle Soup\",\n\t\t\t\t\"description\": \"can\",\n\t\t\t\t\"itemCount\": 1\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Vegetable\",\n\t\t\t\t\"description\": \"can\",\n\t\t\t\t\"itemCount\": 1\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Beef with juice\",\n\t\t\t\t\"description\": \"can\",\n\t\t\t\t\"itemCount\": 2\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Corn\",\n\t\t\t\t\"description\": \"can\",\n\t\t\t\t\"itemCount\": 3\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Chick Peas\",\n\t\t\t\t\"description\": \"can\",\n\t\t\t\t\"itemCount\": 4\n\t\t\t}\n\t\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/donations",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"donations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostDonation3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"dateReceived\": \"2019-09-19\",\n\t\"donorName\": \"Robin D'Martino\",\n\t\"donorAddress\": \"3 Fake St, Charlotte, NC, 12345\",\n\t\"donorEmail\": \"twinterf@uncc.edu\",\n\t\"donationWeight\": 15,\n\t\"itemsDonated\": [\n\t\t\t{\n\t\t\t\t\"name\": \"Butter Sliders\",\n\t\t\t\t\"description\": \"bags\",\n\t\t\t\t\"itemCount\": 2\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Bread\",\n\t\t\t\t\"description\": \"Bag of oatmeal bread\",\n\t\t\t\t\"itemCount\": 1\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Bread\",\n\t\t\t\t\"description\": \"Bag of butter bread\",\n\t\t\t\t\"itemCount\": 1\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Bread\",\n\t\t\t\t\"description\": \"Bag of honey wheat\",\n\t\t\t\t\"itemCount\": 2\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Bread\",\n\t\t\t\t\"description\": \"Bag of 15 grain bread\",\n\t\t\t\t\"itemCount\": 2\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Bread\",\n\t\t\t\t\"description\": \"Bag of itlian sesame bread\",\n\t\t\t\t\"itemCount\": 1\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Bread\",\n\t\t\t\t\"description\": \"Bag of white bread\",\n\t\t\t\t\"itemCount\": 1\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Bread\",\n\t\t\t\t\"description\": \"Bag of italian white bread\",\n\t\t\t\t\"itemCount\": 1\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Bread\",\n\t\t\t\t\"description\": \"Bag of whole grain bread\",\n\t\t\t\t\"itemCount\": 1\n\t\t\t}\n\t\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/donations",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"donations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostDonation4",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"dateReceived\": \"2019-09-19\",\n\t\"donorName\": \"Publix\",\n\t\"donationWeight\": 9,\n\t\"itemsDonated\": [\n\t\t\t{\n\t\t\t\t\"name\": \"Pastry Bites\",\n\t\t\t\t\"description\": \"Rasberry pastry bites\",\n\t\t\t\t\"itemCount\": 2\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Bread\",\n\t\t\t\t\"description\": \"White mountain bread\",\n\t\t\t\t\"itemCount\": 1\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Hamburger Buns\",\n\t\t\t\t\"description\": \"8 count of buns\",\n\t\t\t\t\"itemCount\": 1\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Rolls\",\n\t\t\t\t\"description\": \"12 count of potato rolls\",\n\t\t\t\t\"itemCount\": 1\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Cake\",\n\t\t\t\t\"description\": \"Apple coffee cake\",\n\t\t\t\t\"itemCount\": 1\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Cupcakes\",\n\t\t\t\t\"description\": \"6 count of buttercream cupcakes\",\n\t\t\t\t\"itemCount\": 2\n\t\t\t}\n\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/donations",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"donations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostDonation5",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"dateReceived\": \"2019-09-23\",\n\t\"donorName\": \"Julia Loomer\",\n\t\"donorAddress\": \"5 Fake St, Charlotte, NC, 12345\",\n\t\"donorEmail\": \"twinterf@uncc.edu\",\n\t\"donationWeight\": 12,\n\t\"itemsDonated\": [\n\t\t\t{\n\t\t\t\t\"name\": \"Strawberry Pastries\",\n\t\t\t\t\"description\": \"Boxes of frosted strawberry toasted pastries\",\n\t\t\t\t\"itemCount\": 4\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Rice\",\n\t\t\t\t\"description\": \"Chicken Flavored Rice\",\n\t\t\t\t\"itemCount\": 3\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Cheerios\",\n\t\t\t\t\"description\": \"Boxes of pumpkin spice cheerios\",\n\t\t\t\t\"itemCount\": 2\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Vegetable Oil\",\n\t\t\t\t\"description\": \"Vegetable oil\",\n\t\t\t\t\"itemCount\": 1\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Eggplant Garlic Spread\",\n\t\t\t\t\"description\": \"Eggplant Garlic Spread\",\n\t\t\t\t\"itemCount\": 1\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Ramen Soup\",\n\t\t\t\t\"description\": \"Instant Ramen Soup\",\n\t\t\t\t\"itemCount\": 1\n\t\t\t}\n\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/donations",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"donations"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "always run these when testing the api",
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
