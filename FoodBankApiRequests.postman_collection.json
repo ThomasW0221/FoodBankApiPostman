@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ec709aa2-a632-4b37-b07b-0a88130d9a7e",
+		"_postman_id": "8b13a2af-c46a-4dc7-bd4b-c0157d2b7171",
 		"name": "FoodBankApiRequests",
 		"description": "Run these when testing the backend\n\n<em>This will replace the records that we preload into the database so you will have to use these for testing</em>",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -181,6 +181,222 @@
 				}
 			],
 			"description": "always run these when testing the api",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "DonationGetQueries",
+			"item": [
+				{
+					"name": "queryByDonation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/donations?donationId=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"donations"
+							],
+							"query": [
+								{
+									"key": "donationId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "queryByDonorNameAndFromDate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/donations?donorName=Cathy Rozzo&fromDate=2019-09-01",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"donations"
+							],
+							"query": [
+								{
+									"key": "donorName",
+									"value": "Cathy Rozzo"
+								},
+								{
+									"key": "fromDate",
+									"value": "2019-09-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "queryByDonorNameAndFromDate Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/donations?donorName=Cathy Rozzo&fromDate=2019-09-01",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"donations"
+							],
+							"query": [
+								{
+									"key": "donorName",
+									"value": "Cathy Rozzo"
+								},
+								{
+									"key": "fromDate",
+									"value": "2019-09-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "queryByDonorNameAndFromDateAndToDate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/donations?donorName=Cathy Rozzo&fromDate=2019-09-01&toDate=2019-09-30",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"donations"
+							],
+							"query": [
+								{
+									"key": "donorName",
+									"value": "Cathy Rozzo"
+								},
+								{
+									"key": "fromDate",
+									"value": "2019-09-01"
+								},
+								{
+									"key": "toDate",
+									"value": "2019-09-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "queryByFromDate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/donations?fromDate=2018-09-30",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"donations"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2018-09-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "queryByFromDateAndToDate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/donations?fromDate=2018-09-30&toDate=2019-10-01",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"donations"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2018-09-30"
+								},
+								{
+									"key": "toDate",
+									"value": "2019-10-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "queryByWeightRange",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/donations?minWeight=15&maxWeight=999",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"donations"
+							],
+							"query": [
+								{
+									"key": "minWeight",
+									"value": "15"
+								},
+								{
+									"key": "maxWeight",
+									"value": "999"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "defaultQuery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/donations",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"donations"
+							]
+						}
+					},
+					"response": []
+				}
+			],
 			"protocolProfileBehavior": {}
 		}
 	],
